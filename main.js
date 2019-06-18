@@ -84,7 +84,7 @@ function draw() {
   for (let i = 0; i < out.length; i++) {
     const p = out[i];
     const dx = cx - total / 2 + sum + margin;
-    if (p.p) {
+    if (p.p !== undefined) {
       let sw = parts[p.p + 1] - parts[p.p];
       const dw = hstep * sw / iw;
       ctx.save();
