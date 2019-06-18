@@ -83,8 +83,10 @@ function draw() {
 
   let sum = 0;
   for (let i = 0; i < out.length; i++) {
+    if(i > 0)
+      sum += margin;
     const p = out[i];
-    const dx = cx - total / 2 + sum + margin;
+    const dx = cx - total / 2 + sum;
     if (p.p !== undefined) {
       let sw = parts[p.p + 1] - parts[p.p];
       const dw = hstep * sw / iw;
@@ -92,14 +94,14 @@ function draw() {
       ctx.translate(dx + dw / 2, step * 3.5);
       ctx.scale(p.f[0] ? -1 : 1, p.f[1] ? -1 : 1);
       ctx.drawImage(img, parts[p.p], 0, sw, ih, -dw / 2, -step / 2, dw, step);
-      sum += margin + dw;
+      sum += dw;
       ctx.restore();
     } else if (text[i] !== ' ') {
       ctx.strokeRect(dx, step * 3, spaces, step);
       ctx.fillText(text[i].toUpperCase(), dx + spaces / 2, step * 3.5 + fontsize / 2);
-      sum += margin + spaces;
+      sum += spaces;
     } else {
-      sum += margin + spaces;
+      sum += spaces;
     }
   }
 
