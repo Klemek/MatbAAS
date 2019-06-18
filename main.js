@@ -60,7 +60,7 @@ function draw() {
 
   ctx.drawImage(img, cx - hstep / 2, 0, hstep, step);
   ctx.fillText('Me and the boys', cx, step + fontsize);
-  for (let i = 0; i < plength - 1; i++) {
+  for (let i = 0; i < plength; i++) {
     const sw = parts[i + 1] - parts[i];
     const dx = cx - hstep / 2 - margin * (parts.length / 2 - 1 - i) + parts[i] * hstep / iw;
     const dw = hstep * sw / iw;
