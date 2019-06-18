@@ -1,4 +1,5 @@
 const parts = [0, 132, 236, 320, 395, 440, 490, 540, 600, 650, 700, 750, 800, 320, 360]; //last 2 is half n = r
+const plength = 12;
 
 const randItem = list => list[Math.floor(Math.random() * list.length)];
 
@@ -59,7 +60,7 @@ function draw() {
 
   ctx.drawImage(img, cx - hstep / 2, 0, hstep, step);
   ctx.fillText('Me and the boys', cx, step + fontsize);
-  for (let i = 0; i < parts.length - 1; i++) {
+  for (let i = 0; i < plength - 1; i++) {
     const sw = parts[i + 1] - parts[i];
     const dx = cx - hstep / 2 - margin * (parts.length / 2 - 1 - i) + parts[i] * hstep / iw;
     const dw = hstep * sw / iw;
