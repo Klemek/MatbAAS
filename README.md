@@ -1,3 +1,6 @@
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/Klemek/MatbAAS.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/MatbAAS/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/Klemek/MatbAAS.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Klemek/MatbAAS/alerts/)
+
 # MatbAAS
 
 "Me and the boys" As A Service
